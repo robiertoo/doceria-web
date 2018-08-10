@@ -4,6 +4,8 @@
 	margin: 0;
 	padding: 0;
 	font-family: 'Work Sans', sans-serif;
+	--cor-principal: #ff6eb3;
+	--cor-principal-claro: #ff8bc2;
 }
 
 html, body{
@@ -12,25 +14,34 @@ html, body{
 }
 
 h1{
-	color: #ff1919;
+	color: var(--cor-principal-claro);
 	font-size: 90px;
 	margin: 3% 0;
 	font-family: 'Lobster Two', cursive;
 }
 
+p{
+	color: #666666;
+}
+
 a{
-	color: #ff0000;
+	color: #cc588f;
 	text-decoration: none;
 }
 
+a:hover{
+	color: #99426b;
+	text-decoration: underline;
+}
+
 a:visited{
-	color: #b20000;
+	color: #b24d7d;
 }
 
 #navbar{
 	width: 100%;
 	height: 8vh;
-	background: red;
+	background: var(--cor-principal);
 	position: fixed;
 	display: flex;
 	align-items: center;
@@ -58,67 +69,87 @@ a:visited{
 }
 
 #menu a:hover{
-	background: #b20000;
+	background: #cc588f;
 	border-radius: 5px;
 }
 
-/*#menu .brand{
+.conteudo{
+	height: 93vh;
+}
+
+.text{
+	padding: 2%;
+	background: white;
+	width: 60%;
+	height: 60%;
+	display: block;
+	margin: 0 auto;
+}	
+
+
+#sections{
+	padding-top: 8vh;
+}
+
+body{
+	background-image: url("../imgs/doce-bg-edit.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.conteudo{
+	display: flex;
+	align-items: center;
+}
+
+body .mascara-imagem{
+	/*background: rgba(255,255,255,0.4);*/
+	background: rgba(0,0,0,0.5);
+	position: fixed;
+	color: white;
+	width: 100%;
+	height: 93vh;
+	z-index: -1;
+}
+
+#contato .text .social-media {
+	display: flex;
+	justify-content: center;
+}
+
+#contato .text .social-media img{
+	margin: 0 auto;
+	display: block;
+	margin-bottom: 10px;
+}
+
+#contato .text .social-media .social-media-box{
+	padding: 1%;
+	width: 100%;
+	text-align: center;
+}
+
+#contato .text .social-media .facebook, .whatsapp {
+	border-right: 1px solid var(--cor-principal-claro);
+	border-right-style: dotted;
+}
+
+.icon{
+	width: 40px;
+}
+
+#footer{
+	width: 100%;
+	height: 6vh;
+	background: var(--cor-principal);
+	color: white;
+	display: flex;
+	align-items: center;
+}
+
+#footer span{
 	font-size: 22px;
 	font-family: 'Lobster Two', cursive;
-	}*/
-
-	.conteudo{
-		height: 93vh;
-	}
-
-	.text{
-		padding: 2%;
-		background: white;
-		width: 60%;
-		height: 60%;
-		display: block;
-		margin: 0 auto;
-	}	
-
-
-	#sections{
-		padding-top: 8vh;
-	}
-
-	body{
-		background-image: url("../imgs/doce-bg-edit.jpg");
-		background-repeat: no-repeat;
-		background-attachment: fixed;
-	}
-
-	.conteudo{
-		display: flex;
-		align-items: center;
-	}
-
-	body .mascara-imagem{
-		/*background: rgba(255,255,255,0.4);*/
-		background: rgba(0,0,0,0.5);
-		position: fixed;
-		color: white;
-		width: 100%;
-		height: 93vh;
-		z-index: -1;
-	}
-
-	#footer{
-		width: 100%;
-		height: 6vh;
-		background: red;
-		color: white;
-		display: flex;
-		align-items: center;
-	}
-
-	#footer span{
-		font-size: 22px;
-		font-family: 'Lobster Two', cursive;
-		margin: 0 auto;
-		display: block;
-	}
-
+	margin: 0 auto;
+	display: block;
+}
