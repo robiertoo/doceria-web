@@ -86,13 +86,9 @@ a:visited{
 	}
 
 	body{
-		background-image: url("../imgs/doce-bg.jpg");
+		background-image: url("../imgs/doce-bg-edit.jpg");
 		background-repeat: no-repeat;
 		background-attachment: fixed;
-	}
-
-	#header{
-		/*background-image: url("../imgs/doce-bg.jpg");*/
 	}
 
 	.conteudo{
