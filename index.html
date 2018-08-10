@@ -2,15 +2,20 @@
 <html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Coisas Deliciosas No Pote Que A Mary Fez</title>
 	<link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
 	<link rel="stylesheet" href="css/app.css">
 </head>
 <body>
 	<div id="navbar">
+		<label for="menu-cb">
+			<img src="imgs/menu.svg" class="menu-btn" alt="menu">
+		</label>
+		<input id="menu-cb" class="checkbox" type="checkbox">
 		<div id="menu">
 			<ul>
-				<li><a href="#sections" class="brand">#CDNPQAMF</a></li>
+				<li><a href="#header" class="brand">#CDNPQAMF</a></li>
 				<li><a href="#sobre">SOBRE</a></li>
 				<li><a href="#delicias">DELÍCIAS</a></li>
 				<li><a href="#contato">CONTATO</a></li>
@@ -28,9 +33,10 @@
 			<div class="conteudo">
 				<div class="text">
 					<h1>Bem-vindo!</h1>
-					<p>Este é o COISAS DELICIOSAS NO POTE QUE A MARY FEZ!</p>
+					<p>Este é o <strong style="color: var(--cor-principal);">COISAS DELICIOSAS NO POTE QUE A MARY FEZ</strong>!</p>
 					<p>Sim, sabemos que o nome é meio grandinho, mas, acredite em mim, o sabor dos bolinhos é diretamente proporcional ao tamanho desse título.</p>
 					<p>Pode confiar! ;)</p>
+					<p class="kkk">bgbugubgu</p>
 				</div>
 			</div>		
 		</section>
@@ -67,20 +73,32 @@
 		<section id="contato">
 			<div class="conteudo">
 				<div class="text">
-
 					<h1>Contato</h1>
+					<p>
+						Se interessou pelos bolinhos? É de dar água na boca, não é mesmo?
+					</p>
+					<br>
+					<p>
+						ENTRE <strong style="color: var(--cor-principal)">JÁ</strong> EM CONTATO!
+					</p>
 					<div class="social-media">
 						<div class="social-media-box facebook">
-							<img class="icon" src="imgs/facebook.svg" alt="">
-							<p><a href="http://fb.com/maryane.beedaque" target="_blank">maryane.beedaque</a></p>
+							<a href="http://fb.com/maryane.beedaque" target="_blank">
+								<img class="icon" src="imgs/facebook.svg" alt="">
+								<p>maryane.beedaque</p>
+							</a>
 						</div>
 						<div class="social-media-box whatsapp">
-							<img class="icon" src="imgs/whatsapp.svg" alt="">
-							<p>(12) 99146-1602</p>
+							<a href="https://api.whatsapp.com/send?1=pt_BR&phone=5512991461602" target="_blank">
+								<img class="icon" src="imgs/whatsapp.svg" alt="">
+								<p>(12) 99146-1602</p>
+							</a>
 						</div>
-						<div class="social-media-box">
-							<img class="icon" src="imgs/instagram.svg" alt="">
-							<p><a href="https://www.instagram.com/coisas_deliciosas_no_pote" target="_blank">coisas_deliciosas_no_pote</a></p>
+						<div class="social-media-box instagram">
+							<a href="https://www.instagram.com/coisas_deliciosas_no_pote" target="_blank">
+								<img class="icon" src="imgs/instagram.svg" alt="">
+								<p>coisas_deliciosas_no_pote</p>
+							</a>
 						</div>						
 					</div>
 
@@ -93,7 +111,7 @@
 		</section>
 
 	</div>
-	
+
 	<script src="js/app.js"></script>
 </body>
 </html>

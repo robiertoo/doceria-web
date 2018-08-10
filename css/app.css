@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:100,300, 400|Lobster+Two');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:100,300,400|Cookie');
 
 *{
 	margin: 0;
@@ -6,6 +6,7 @@
 	font-family: 'Work Sans', sans-serif;
 	--cor-principal: #ff6eb3;
 	--cor-principal-claro: #ff8bc2;
+	--cor-principal-escuro: #e563a1;
 }
 
 html, body{
@@ -15,9 +16,10 @@ html, body{
 
 h1{
 	color: var(--cor-principal-claro);
-	font-size: 90px;
+	font-size: 110px;
 	margin: 3% 0;
-	font-family: 'Lobster Two', cursive;
+	font-family: 'Cookie', cursive;
+	font-weight: lighter;
 }
 
 p{
@@ -38,118 +40,242 @@ a:visited{
 	color: #b24d7d;
 }
 
-#navbar{
-	width: 100%;
-	height: 8vh;
-	background: var(--cor-principal);
-	position: fixed;
-	display: flex;
-	align-items: center;
-}
-
-#menu{
-	margin: 0 auto;
-	display: table;
-}
-
 #menu ul{
 	list-style-type: none;
+	text-align: center;
 }
 
 #menu li{
-	display: inline;
-	float: left;
+	padding: 16px;
 }
 
 #menu a{
 	text-decoration: none;
 	color: white;
-	padding: 16px;
 	transition: all  0.3s ease-in-out;
-}
-
-#menu a:hover{
-	background: #cc588f;
-	border-radius: 5px;
-}
-
-.conteudo{
-	height: 93vh;
-}
-
-.text{
-	padding: 2%;
-	background: white;
-	width: 60%;
-	height: 60%;
-	display: block;
-	margin: 0 auto;
-}	
-
-
-#sections{
-	padding-top: 8vh;
-}
-
-body{
-	background-image: url("../imgs/doce-bg-edit.jpg");
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-}
-
-.conteudo{
-	display: flex;
-	align-items: center;
-}
-
-body .mascara-imagem{
-	/*background: rgba(255,255,255,0.4);*/
-	background: rgba(0,0,0,0.5);
-	position: fixed;
-	color: white;
-	width: 100%;
-	height: 93vh;
-	z-index: -1;
-}
-
-#contato .text .social-media {
-	display: flex;
-	justify-content: center;
-}
-
-#contato .text .social-media img{
-	margin: 0 auto;
-	display: block;
-	margin-bottom: 10px;
-}
-
-#contato .text .social-media .social-media-box{
-	padding: 1%;
-	width: 100%;
-	text-align: center;
-}
-
-#contato .text .social-media .facebook, .whatsapp {
-	border-right: 1px solid var(--cor-principal-claro);
-	border-right-style: dotted;
-}
-
-.icon{
-	width: 40px;
-}
-
-#footer{
-	width: 100%;
-	height: 6vh;
-	background: var(--cor-principal);
-	color: white;
-	display: flex;
-	align-items: center;
-}
-
-#footer span{
 	font-size: 22px;
-	font-family: 'Lobster Two', cursive;
-	margin: 0 auto;
-	display: block;
+}
+
+.checkbox{
+	display: none;
+}
+
+@media only screen and (max-width: 450px){
+	h1{
+		font-size: 80px;
+	}
+
+	p{
+		font-size: 18px;
+	}
+
+	#menu a{
+		font-size: 20px !important;
+	}
+
+	#contato .icon{
+		width: 40px !important;
+		margin-right: 10px;
+	}
+}
+
+
+@media only screen and (max-width: 1023px){
+	#navbar{
+		top: 0;
+		width: 100%;
+		height: 10vh;
+		background: var(--cor-principal);
+		position: fixed;
+		display: flex;
+		align-items: center;
+	}
+
+	#menu{
+		width: 100%;
+		height: 40%;
+		transition: 0.5s;
+		margin: 0 auto;
+		display: block;
+		margin-top: -1000px;
+	}
+
+	#menu li{
+		background: var(--cor-principal);
+	}
+
+
+	#menu a{
+		font-size: 40px;
+	}
+
+	.menu-btn{
+		top: 0;
+		right: 0;
+		position: absolute;
+		height: 10vh;
+		cursor: pointer;
+	}
+
+	.checkbox:checked + #menu{
+		margin-top: 10vh;
+	}
+
+	#sections{
+		margin-top: 11vh;
+		padding: 0 5%;
+	}
+
+	#contato .social-media{
+		margin-top: 15px;
+		display: flex;
+		align-items: center;
+		width: 50%;
+	}
+
+	#contato .social-media .social-media-box{
+		margin: 0 auto;
+		display: block;
+	}
+
+	#contato .social-media .social-media-box .icon{
+		width: 50px;
+		margin: 0 auto;
+		display: block;
+	}
+
+	#contato .social-media-box p{
+		display: none;
+	}
+
+	#footer{
+		margin-top: 20px;
+		text-align: center;
+	}
+}
+
+
+@media only screen and (min-width: 1024px) {
+	#navbar{
+		width: 100%;
+		height: 8vh;
+		background: linear-gradient(to right, var(--cor-principal), var(--cor-principal-escuro));
+		position: fixed;
+		display: flex;
+		align-items: center;
+	}
+
+	.menu-btn{
+		display: none;
+	}
+
+	#menu{
+		margin: 0 auto;
+		display: table;
+	}
+
+	#menu li{
+		display: inline;
+		float: left;
+	}
+
+	#menu a{
+		padding: 15px;
+	}
+
+	#menu a:hover{
+		background: #cc588f;
+		border-radius: 5px;
+	}
+
+	.conteudo{
+		height: 93vh;
+	}
+
+	.text{
+		padding: 2%;
+		background: white;
+		width: 60%;
+		height: 60%;
+		display: block;
+		margin: 0 auto;
+	}	
+
+
+	#sections{
+		padding-top: 8vh;
+	}
+
+	body{
+		background-image: url("../imgs/doce-bg-edit.jpg");
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+	}
+
+	.conteudo{
+		display: flex;
+		align-items: center;
+	}
+
+	body .mascara-imagem{
+		/*background: rgba(255,255,255,0.4);*/
+		background: rgba(0,0,0,0.5);
+		position: fixed;
+		color: white;
+		width: 100%;
+		height: 93vh;
+		z-index: -1;
+	}
+
+	#header .kkk{
+		float: right;
+	}
+
+	#contato .text .social-media {
+		margin-top: 4%;
+		display: flex;
+		justify-content: center;
+	}
+
+	#contato .text .social-media img{
+		margin: 0 auto;
+		display: block;
+		margin-bottom: 10px;
+	}
+
+	#contato .text .social-media .social-media-box{
+		padding: 1%;
+		width: 100%;
+		text-align: center;
+		background: #fdfdfd;
+	}
+
+	#contato .text .social-media a p{
+		color: #cc588f;
+	}
+
+	#contato .text .social-media .facebook, .whatsapp {
+		border-right: 1px solid var(--cor-principal-claro);
+		border-right-style: dotted;
+	}
+
+	.icon{
+		width: 40px;
+	}
+
+	#footer{
+		width: 100%;
+		height: 6vh;
+		background: linear-gradient(to right, var(--cor-principal-escuro), var(--cor-principal));
+		color: white;
+		display: flex;
+		align-items: center;
+	}
+
+	#footer span{
+		font-size: 30px;
+		font-family: 'Cookie', cursive;
+		margin: 0 auto;
+		display: block;
+	}
 }
