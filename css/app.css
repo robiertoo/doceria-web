@@ -110,11 +110,19 @@ a:visited{
 	}
 
 	.menu-btn{
-		top: 0;
-		right: 0;
+		top: 2px;
+		right: 2px;
 		position: absolute;
-		height: 10vh;
+		height: 9vh;
+		fill: #fff;
 		cursor: pointer;
+		border: solid 1px #fff;
+		/*border-radius: 4px;*/
+	}
+
+	.active{
+		fill: #000;
+		border: solid 1px #000;
 	}
 
 	.checkbox:checked + #menu{
